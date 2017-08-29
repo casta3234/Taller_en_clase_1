@@ -24,9 +24,9 @@ public class Main {
         int[] codigo = new int[numeroproductos];
         String[] descripcione = new String[numeroproductos];
         double[] precio = new double[numeroproductos];
-        Producto[] producto = new Producto[numeroproductos+1];
+        Producto[] producto = new Producto[numeroproductos + 1];
         for (int i = 0; i < numeroproductos; i++) {
-            System.out.println("ingrese los datos para el producto " + (i+1) + " en el siguiente orden codigo, descripcion, precio");
+            System.out.println("ingrese los datos para el producto " + (i + 1) + " en el siguiente orden codigo, descripcion, precio");
             codigo[i] = teclado.nextInt();
             descripcione[i] = teclado.next();
             precio[i] = teclado.nextDouble();
@@ -49,9 +49,9 @@ public class Main {
         Venta[] venta = new Venta[20];
         double valorDeTodasLasVentas = 0;
         for (int i = 0; i < 20; i++) {
-                System.out.println("para registrar la venta ingrese los datos en el siguiente orden"
-                + " dia,mes,año,hora, nombre apellido e ID del vendedor, codigo del producto,cantidad vendida "
-                + "forma de pago(0-efectivo 1-debito 2-targeta),");
+            System.out.println("para registrar la venta ingrese los datos en el siguiente orden"
+                    + " dia,mes,año,hora, nombre apellido e ID del vendedor, codigo del producto,cantidad vendida "
+                    + "forma de pago(0-efectivo 1-debito 2-targeta),");
             dia[i] = teclado.nextInt();
             mes[i] = teclado.nextInt();
             año[i] = teclado.nextInt();
@@ -65,11 +65,11 @@ public class Main {
             fecha[i] = new Date(año[i], mes[i], dia[i], hora[i], 0);
             vendedor[i] = new Vendedor(idVendedor[i], nombreVendedor[i], apellidoVendedor[i]);
             detallesVenta[i] = new DetallesVenta(cantidadVendida[i], formaDePago[i]);
-            venta[i] = new Venta(producto[0].getProducto(producto,codigoProducto[i] ), vendedor[i], detallesVenta[i], fecha[i]);
+            venta[i] = new Venta(producto[0].getProducto(producto, codigoProducto[i]), vendedor[i], detallesVenta[i], fecha[i]);
             valorDeTodasLasVentas = valorDeTodasLasVentas + venta[i].getValorVenta();
             System.out.println("quiere registrar otra venta(1:si , 0:no)");
             int n = teclado.nextInt();
-            
+
             if (n <= 0) {
                 i = 21;
             }
