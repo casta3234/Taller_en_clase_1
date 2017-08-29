@@ -33,7 +33,7 @@ public class Main {
             producto[i] = new Producto(codigo[i], descripcione[i], precio[i]);
         }
         System.out.println("para registrar una venta ingrese los datos en el siguiente orden"
-                + "dia,mes,año,hora, nombre apellido e ID del vendedor, codigo del producto,cantidad vendida "
+                + " dia,mes,año,hora, nombre apellido e ID del vendedor, codigo del producto,cantidad vendida "
                 + "forma de pago(0-efectivo 1-debito 2-targeta),");
         int[] dia = new int[20];
         int[] mes = new int[20];

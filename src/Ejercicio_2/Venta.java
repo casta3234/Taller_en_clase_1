@@ -32,12 +32,12 @@ public class Venta {
     }
 
     public void imprimirFactura() {
-        System.out.println("año: " + this.fecha.getYear() + "mes: " + this.fecha.getMonth()
-                + "dia: " + this.fecha.getDay() + "hora: " + this.fecha.getHours());
+        System.out.println("año:" + this.fecha.getYear() + " mes:" + this.fecha.getMonth()
+                + " dia:" + this.fecha.getDay() + " hora:" + this.fecha.getHours());
         System.out.println("Vendedor: " + this.vendedor.getNombre() + " " + this.vendedor.getApellido()
-                + "ID: " + this.vendedor.getId());
-        System.out.println("codigo del producto: " + this.producto.getCodigo() + "catidad vendida: "
-                + this.detallesVenta.getUnidadesVendidas() + "valor total: " + this.valorVenta);
+                + " ID: " + this.vendedor.getId());
+        System.out.println("codigo del producto: " + this.producto.getCodigo() + " catidad vendida: "
+                + this.detallesVenta.getUnidadesVendidas() + " valor total: " + this.valorVenta);
         switch (this.detallesVenta.getFormaDeVenta()) {
             case 0:
                 System.out.println("se pago con efectivo");
